@@ -8,11 +8,7 @@ jobs:
   move:
     permissions:
       contents: write
-      id-token: write
-      pages: write
-      pull-requests: write
       issues: write
-      repository-projects: write
     runs-on: ubuntu-latest
     if: startsWith(github.event.issue.title, 'Chess:')
 
