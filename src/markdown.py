@@ -118,22 +118,40 @@ def board_to_markdown(board):
     board_list = [[item for item in line.split(' ')] for line in str(board).split('\n')]
     markdown = ""
 
+    # images = {
+    #     "r": "Rook_B",
+    #     "n": "Knight_B",
+    #     "b": "Bishop_B",
+    #     "q": "Queen_B",
+    #     "k": "King_B",
+    #     "p": "Pawn_B",
+
+    #     "R": "Rook_W",
+    #     "N": "Knight_W",
+    #     "B": "Bishop_W",
+    #     "Q": "Queen_W",
+    #     "K": "King_W",
+    #     "P": "Pawn_W",
+
+    #     ".": "."
+    # }
+
     images = {
-        "r": "Rook_B",
-        "n": "Knight_B",
-        "b": "Bishop_B",
-        "q": "Queen_B",
-        "k": "King_B",
-        "p": "Pawn_B",
+        "r": "img/black/rook.png",
+        "n": "img/black/knight.png",
+        "b": "img/black/bishop.png",
+        "q": "img/black/queen.png",
+        "k": "img/black/king.png",
+        "p": "img/black/pawn.png",
 
-        "R": "Rook_W",
-        "N": "Knight_W",
-        "B": "Bishop_W",
-        "Q": "Queen_W",
-        "K": "King_W",
-        "P": "Pawn_W",
+        "R": "img/white/rook.png",
+        "N": "img/white/knight.png",
+        "B": "img/white/bishop.png",
+        "Q": "img/white/queen.png",
+        "K": "img/white/king.png",
+        "P": "img/white/pawn.png",
 
-        ".": "."
+        ".": "img/blank.png"
     }
 
     # Write header in Markdown format
