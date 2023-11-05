@@ -168,12 +168,11 @@ def board_to_markdown(board):
 
     # Write board
     for row in rows:
-        adjusted_row = 9 - row if not is_black_turn else row
-        markdown += "| **" + str(adjusted_row) + "** | "
-        for elem in board_list[8-row] if is_black_turn else board_list[row - 1]:
+        markdown += "| **" + str(9 - row) + "** | "
+        for elem in board_list[row - 1]:
             markdown += "<img src=\"{}\" width=50px> | ".format(images.get(elem, "???"))
 
-        markdown += "**" + str(adjusted_row) + "** |\n"
+        markdown += "**" + str(9 - row) + "** |\n"
 
     # Write footer in Markdown format
     markdown += "|   | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** |   |\n"
