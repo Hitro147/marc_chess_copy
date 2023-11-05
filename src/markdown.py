@@ -166,7 +166,7 @@ def board_to_markdown(board):
         rows = reversed(rows)
     # Write board
     for row in rows:
-        adjusted_row = 9 - row if not is_black_turn else row
+        adjusted_row = 9 - row if is_black_turn else row
         markdown += "| **" + str(adjusted_row) + "** | "
         #markdown += "| **" + str(9 - row) + "** | "
         # for elem in board_list[row - 1]:
