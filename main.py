@@ -367,7 +367,7 @@ def main(issue, issue_author, repo_owner):
 
 if __name__ == '__main__':
     if len(sys.argv) >= 2 and sys.argv[1] == '--self-test':
-        selftest.run(main2)
+        selftest.run(main)
         sys.exit(0)
     else:
         repo = Github(os.environ['GITHUB_TOKEN']).get_repo(os.environ['GITHUB_REPOSITORY'])
