@@ -159,10 +159,13 @@ def board_to_markdown(board):
     markdown += "|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n"
 
     #Check if it's Black's turn
-    is_black_turn = not board.turn
-
+    is_black_turn = board.turn == chess.BLACK
+    #Get Rows
+    rows = range(1, 9)
+    if is_black_turn:
+        rows = reversed(rows)
     # Write board
-    for row in range(1, 9):
+    for row in rows:
         adjusted_row = 9 - row if not is_black_turn else row
         markdown += "| **" + str(adjusted_row) + "** | "
         #markdown += "| **" + str(9 - row) + "** | "
